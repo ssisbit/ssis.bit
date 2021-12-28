@@ -1,4 +1,4 @@
-# ssis.bit
+# ssis:bit
 AIO solution for SSIS students
 
 This is just a placeholder. You might be looking for these files:
