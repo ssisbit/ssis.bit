@@ -1,5 +1,5 @@
-# ssis.bit
-AIO solution for SSIS students
+# ssis:bit
+AIO microcomputer solution with CircuitPython, display and battery for SSIS students.
 
 ## Hardware
 
