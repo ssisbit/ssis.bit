@@ -1,6 +1,8 @@
 # ssis:bit
 AIO solution for SSIS students
 
+![T8 running CircuitPython](docs/ssis.bit_2022-01-06.jpg)
+
 ## Hardware
 
 CircuitPython supports [more than 200 different boards](https://circuitpython.org/downloads). Locally available is the [TTGO T8 ESP32-S2 ST7789](https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/) at several online stores. The board includes the powerful 240MHz CPU, 4MB Flash and 8MB PSRAM, a 1.14" ST7789 display, a microSD card slot for virtually unlimited local data storage, battery connector 1.25mm JST with charge controller and regular USB-C connector. And buildin WiFi, of course.

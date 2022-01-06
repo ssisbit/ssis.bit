@@ -1,4 +1,5 @@
 # ssis:bit
+
 AIO solution for SSIS students
 
 ## Hardware
@@ -44,6 +45,8 @@ Please update.
 
 Start of development of the ssis:bit project based on CircuitPython and the T8 ST7789 from Lilygo.
 
+![T8 running CircuitPython](ssis.bit_2022-01-06.jpg)
+
 ## 2020
 
 The idea is born with a T-Display. But to control the display you need a fast ST7789 library, needs to be integrated into the binary of MicroPython. Feasable, but still not easy enouth for students.
@@ -58,7 +61,7 @@ ASA Arduino club at AIS.
 
 ## 2017
 
-Visit to SSIS for the [VTC 2017]() Vietnam Tech Conference. Students presented their Arduino projects on Friday.
+Visit to SSIS for the [VTC 2017](https://2017.vietnamtechconference.org/) Vietnam Tech Conference. Students presented their Arduino projects on Friday.
 
 ## 2016
 
