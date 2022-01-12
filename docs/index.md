@@ -92,6 +92,24 @@ board.SD_CS
 board.TX
 ```
 
+Mapped out it looks like this:
+
+![GPIO pins T8](GPIO.png)
+
+- 43 GPIO (0-21 (22) and 26-46 (21))
+- 7 not exposed at all (26 to 32)
+- 6 not exposed for LCD (33 to 38)
+- 2 exposed as USB/OTG (43 and 44)
+- 3 further not exposed (9 battery, 10 SD_CS and 14 PE_POWER)
+- 3 exposed for SD read (11 to 13)
+- 22 GPIO ready to use (43-21 as 0-8, 15-21, 39-42, 45-46)
+
+The plan is:
+
+- 2 will be used for I2C
+- 3 will be used for input buttons (0, 1, 2)
+
+
 ## History
 
 More will be updated in the [docs/history](./history) document, but the idea is from 2020 with the [t-display](https://github.com/kreier/t-display) board. Similar idea: Not just the Microcomputer but included power supply (LiPo), display (just 240x135 color) and input device (not keyboard, but 3 buttons) to have it always with you and ready to use.
