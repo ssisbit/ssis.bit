@@ -11,6 +11,17 @@ CircuitPython supports [more than 200 different boards](https://circuitpython.or
 
 The planned adapterplate adds a 3-way button for input, place to hold the little 350 mAh battery and interface for I2C with regular 2.54mm 4pin JST XH as well as the small Stemma QT 1mm JST SH connector (QWIIC).
 
+### Documentation by LilyGo or TTGO
+
+Parts of the documentation for this board can be found under both brand names LilyGo and TTGO. The main board resembles an [LilyGo T8](https://github.com/Xinyuan-LilyGO/LILYGO-T8) with a [ESP32-S2](https://github.com/Xinyuan-LilyGO/ESP32_S2) CPU but an added ST7789 display. So the schematic is found under [T-Display S2](https://github.com/Xinyuan-LilyGO/LilyGo-T-Display-S2) even though it is not sold as such. Here are some repositories for further informations:
+
+- https://github.com/Xinyuan-LilyGO/LilyGo-T-Display-S2
+- https://github.com/Xinyuan-LilyGO/LilyGO-T-DisplayGD32
+- https://github.com/Xinyuan-LilyGO/LILYGO-T-display-RP2040
+- https://github.com/Xinyuan-LilyGO/TTGO-T-Display
+- https://github.com/Xinyuan-LilyGO/LILYGO-T8
+- https://github.com/Xinyuan-LilyGO/ESP32_S2
+
 ## Software
 
 The ssis:bit runs [CircuitPython](https://circuitpython.org/) and can be easily programmed with the [Mu Editor](https://codewith.mu/en/). There is a lot to learn on [Adafruit with CircuitPython]() and with their great libraries there is less frustration getting things started.
