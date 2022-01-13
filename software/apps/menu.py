@@ -1,6 +1,5 @@
 # ssis:bit v0.1
-# program menu selector in code.py
-
+# start screen code.py
 # 2022/01/07
 
 import time, os, sys
@@ -12,10 +11,9 @@ color_menu   = 0xFFFFFF
 color_select = 0x00FF55
 long_press   = 0.8          # time in seconds for long press to start program
 
-#pin = digitalio.DigitalInOut(board.IO0)    # boot switch - choose and select
-#pin.direction = digitalio.Direction.INPUT
-#pin.pull = digitalio.Pull.UP
-
+pin = digitalio.DigitalInOut(board.IO0)    # boot switch - choose and select
+pin.direction = digitalio.Direction.INPUT
+pin.pull = digitalio.Pull.UP
 switch = Debouncer(pin, interval=0.05)
 
 programs = os.listdir('apps')              # folder for programs
@@ -69,13 +67,12 @@ while True:
     pressed = time.monotonic()
   if switch.rose:    # button released
     time_pressed = time.monotonic() - pressed
-    if time_pressed > long_press:               # start this program
+    if time_pressed > long_press:
       if select < 2:
         sys.exit()
       program = "apps/" + programs[select - 2]
-      pin.deinit()
+      #switch.release()
       # displayio.release_displays() # return to REPL output - tbd
-
       exec(open(program).read())
     select += 1
     if (select > number_programs + 1):
