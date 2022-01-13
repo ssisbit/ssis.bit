@@ -1,6 +1,6 @@
 # ssis:bit hardware
 
-The foundation of the ssis:bit is a [LilyGo T8 ST7789](https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/) board with [CircuitPython](https://circuitpython.org/). It has already many key features out of the box:
+The foundation of the ssis:bit is a [LilyGo T8 ST7789](https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/) board (in GitHub as [T-Display S2](https://github.com/Xinyuan-LilyGO/LilyGo-T-Display-S2)) with [CircuitPython](https://circuitpython.org/). It has already many key features out of the box:
 
 - ESP32-S2 with 240 MHz CPU, 4GB Flash, 8GB PSRAM
 - 1.14" ST7789 Display 240x135
