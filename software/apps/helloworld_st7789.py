@@ -4,19 +4,23 @@
 # adapted from https://learn.adafruit.com/adafruit-1-14-240x135-color-tft-breakout/circuitpython-displayio-quickstart
 
 import time, random
-import board, displayio, terminalio
+import board, displayio, terminalio, digitalio
 from adafruit_display_text import label
 
 display = board.DISPLAY      # CP already sets up display for us, 240x135 for LILYGO T8 ESP32-S2
 screen = displayio.Group()   # a main group that holds everything
 display.show(screen)         # add main group to display
 
+pin = digitalio.DigitalInOut(board.IO0)    # just to exit the program with the boot switch 
+pin.direction = digitalio.Direction.INPUT
+pin.pull = digitalio.Pull.UP
+
 # First set some parameters used for shapes and text
 BORDER = 20
 FONTSCALE = 2
 BACKGROUND_COLOR = 0x00FF00  # Bright Green
 FOREGROUND_COLOR = 0xAA0088  # Purple
-TEXT_COLOR = 0xFFFF00
+TEXT_COLOR       = 0xFFFF00
 
 color_bitmap = displayio.Bitmap(display.width, display.height, 1)
 color_palette = displayio.Palette(1)
@@ -48,5 +52,12 @@ text_group = displayio.Group(
 text_group.append(text_area)  # Subgroup for text scaling
 screen.append(text_group)
 
+time.sleep(1)
+
 while True:
-    pass
+    if not pin.value :
+      time.sleep(0.1)
+      while not pin.value:
+        time.sleep(0.1)
+      exec(open("menu.py").read())
+    time.sleep(0.1)

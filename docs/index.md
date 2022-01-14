@@ -92,6 +92,23 @@ board.SD_CS
 board.TX
 ```
 
+Mapped out it looks like this:
+
+![GPIO pins T8](GPIO.png)
+
+- 43 GPIO (0-21 (22) and 26-46 (21))
+- 7 not exposed at all (26 to 32)
+- 6 not exposed for LCD (33 to 38)
+- 2 exposed as USB/OTG (43 and 44)
+- 3 further not exposed (9 battery, 10 SD_CS and 14 PE_POWER)
+- 3 exposed for SD read (11 to 13)
+- 22 GPIO ready to use (43-21 as 0-8, 15-21, 39-42, 45-46)
+
+The plan is:
+
+- 2 will be used for I2C
+- 3 will be used for input buttons (0, 1, 2)
+
 ## Installation
 
 Connect your T8 ST7789 to a USB port of your computer and determine the port. You can do this by right-click on the Windows symbol > Device Manager > ports (COM & LPT) and there you'll find ```USB-SERIAL CH340 (COM5)```. Here COM5 would be your serial port. Open ```cmd``` or ```powershell``` and navigate to the folder with the esptool.exe and firmware.bin.
