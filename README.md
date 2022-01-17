@@ -105,7 +105,7 @@ board.TX
 
 Mapped out it looks like this:
 
-![GPIO pins T8](GPIO.png)
+![GPIO pins T8](docs/GPIO.png)
 
 - 43 GPIO (0-21 (22) and 26-46 (21))
 - 7 not exposed at all (26 to 32)
