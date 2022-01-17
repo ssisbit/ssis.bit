@@ -109,6 +109,16 @@ The plan is:
 - 2 will be used for I2C
 - 3 will be used for input buttons (0, 1, 2)
 
+### I2C connector
+
+The order of pins in the 1mm QUIIC connector is different from the order of the 4 pins found in virtually every hobby board with 2.54mm pins:
+
+![I2C on different boards](i2c_order.jpg)
+
+Therefore we can just solder a 4-pin JST XH 2.54 mm pitch (0.1 ") connector to any of these boards and then use a standard XH-4 cable to connect to our ssis:bit without worrying about polarity or correct pin order:
+
+![I2C on ssis:bit](i2c_connector2.jpg)
+
 ## Installation
 
 Connect your T8 ST7789 to a USB port of your computer and determine the port. You can do this by right-click on the Windows symbol > Device Manager > ports (COM & LPT) and there you'll find ```USB-SERIAL CH340 (COM5)```. Here COM5 would be your serial port. Open ```cmd``` or ```powershell``` and navigate to the folder with the esptool.exe and firmware.bin.
