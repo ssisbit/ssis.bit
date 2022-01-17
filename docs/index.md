@@ -128,7 +128,7 @@ The order of pins in the 1mm QUIIC connector is different from the order of the 
 
 Therefore we can just solder a 4-pin JST XH 2.54 mm pitch (0.1 ") connector to any of these boards and then use a standard XH-4 cable to connect to our ssis:bit without worrying about polarity or correct pin order:
 
-![I2C on ssis:bit](i2c_connector.jpg)
+![I2C on ssis:bit](i2c_connector2.jpg)
 
 ## Installation
 
