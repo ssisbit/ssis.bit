@@ -128,7 +128,7 @@ The order of pins in the 1mm QUIIC connector is different from the order of the 
 
 Therefore we can just solder a 4-pin JST XH 2.54 mm pitch (0.1 ") connector to any of these boards and then use a standard XH-4 cable to connect to our ssis:bit without worrying about polarity or correct pin order:
 
-![I2C on ssis:bit](docs/i2c_connector.jpg)
+![I2C on ssis:bit](docs/i2c_connector2.jpg)
 
 ## Installation
 
@@ -183,9 +183,10 @@ A major challenge to get students use more of the microcomputers like Arduino, R
 Some of these challenges are solved partially with the micro:bit - but limited in the end with just 2 buttons as input and a 5x5 red LED matrix as output. And the power adapter with 2 AAA batteries is not physically connected, making the solution less robust. Advantages with the Lilygo T8 ST7789:
 
 1. AIO solution with 3 button input, 240x135 color display output and small LiPo battery
-2. Standardaised QWIIC / STEMMA QT 1mm JST SH adapter for I2C sensors and IO
-3. Standardised STEMMA 2mm GROVE 2mm JST PH connector
+2. Standardised QWIIC / STEMMA QT 1mm JST SH adapter for I2C sensors and IO
+3. Standardised 2.54mm/0.1" JST XH-4 connector for I2C
 4. SD Card with GB of space for websites, data, images
 5. WIFI build in to serve as an AP students can connect to, or to connect to the Internet
-6. USB-C for charging and simple upload of programs to the CIRCUITPY folder
+6. USB-C for charging and simple upload of programs to the `CIRCUITPY` folder
 7. REPL - get starting programming right away!
+8. Even debugging is possible with the small LCD display - shows the line of the bug
