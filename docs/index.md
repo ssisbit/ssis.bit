@@ -10,7 +10,18 @@ CircuitPython supports [more than 200 different boards](https://circuitpython.or
 
 ![LILYGO T8](T8.jpg)
 
-The planned adapterplate adds a 3-way button for input, place to hold the little 350 mAh battery and interface for I2C with regular 2.54mm 4pin JST XH as well as the small Stemma QT 1mm JST SH connector (QWIIC).
+The planned adapterplate adds a 3-way button for input, place to hold the little 500 mAh battery and interface for I2C with regular 2.54mm 4pin JST XH as well as the small Stemma QT 1mm JST SH connector (QWIIC).
+
+### Documentation by LilyGo or TTGO
+
+Parts of the documentation for this board can be found under both brand names LilyGo and TTGO. The main board resembles an [LilyGo T8](https://github.com/Xinyuan-LilyGO/LILYGO-T8) with a [ESP32-S2](https://github.com/Xinyuan-LilyGO/ESP32_S2) CPU but an added ST7789 display. So the schematic is found under [T-Display S2](https://github.com/Xinyuan-LilyGO/LilyGo-T-Display-S2) even though it is not sold as such. Here are some repositories for further informations:
+
+- https://github.com/Xinyuan-LilyGO/LilyGo-T-Display-S2
+- https://github.com/Xinyuan-LilyGO/LilyGO-T-DisplayGD32
+- https://github.com/Xinyuan-LilyGO/LILYGO-T-display-RP2040
+- https://github.com/Xinyuan-LilyGO/TTGO-T-Display
+- https://github.com/Xinyuan-LilyGO/LILYGO-T8
+- https://github.com/Xinyuan-LilyGO/ESP32_S2
 
 ## Software
 
@@ -160,6 +171,22 @@ The __esptool.py__ is the software provided by esp to upload the firmware to the
 The latest MicroPython firmware for the ESP32 can be found on [micropython.org](https://micropython.org/download/esp32/). This firmware does not include a driver for the ST7789 display. You have several options to include the display library.
 
 
-## History
+## Motivation and History
 
 More will be updated in the [docs/history](./history) document, but the idea is from 2020 with the [t-display](https://github.com/kreier/t-display) board. Similar idea: Not just the Microcomputer but included power supply (LiPo), display (just 240x135 color) and input device (not keyboard, but 3 buttons) to have it always with you and ready to use.
+
+A major challenge to get students to use more of the microcomputers like Arduino, Raspberry Pi or micro:bit is the need for 3 more accessories before they can actually use them:
+
+1. Input (keyboard, accelerometer, buttons, microphone)
+2. Output (display, LEDs, matrix, beeper, serial back to PC)
+3. Power supply (LiPo battery, AC adapter)
+
+Some of these challenges are solved partially with the micro:bit - but limited in the end with just 2 buttons as input and a 5x5 red LED matrix as output. And the power adapter with 2 AAA batteries is not physically connected, making the solution less robust. Advantages with the Lilygo T8 ST7789:
+
+1. AIO solution with 3 button input, 240x135 color display output and small LiPo battery
+2. Standardaised QWIIC / STEMMA QT 1mm JST SH adapter for I2C sensors and IO
+3. Standardised STEMMA 2mm GROVE 2mm JST PH connector
+4. SD Card with GB of space for websites, data, images
+5. WIFI build in to serve as an AP students can connect to, or to connect to the Internet
+6. USB-C for charging and simple upload of programs to the CIRCUITPY folder
+7. REPL - get starting programming right away!
