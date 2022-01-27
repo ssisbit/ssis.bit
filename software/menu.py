@@ -1,6 +1,6 @@
-# ssis:bit v0.1
+# ssis:bit v0.2
 # start screen menu.py
-# 2022/01/07
+# 2022/01/26
 
 import time, os, sys
 import board, displayio, terminalio, digitalio
@@ -9,11 +9,11 @@ from adafruit_display_text import label
 
 color_menu   = 0xFFFFFF
 color_select = 0x00FF55
-long_press   = 0.8          # time in seconds for long press to start program
+long_press   = 0.5          # time in seconds for long press to start program
 
-#pin = digitalio.DigitalInOut(board.IO0)    # boot switch - choose and select
-#pin.direction = digitalio.Direction.INPUT
-#pin.pull = digitalio.Pull.UP
+pin = digitalio.DigitalInOut(board.IO0)    # boot switch - choose and select
+pin.direction = digitalio.Direction.INPUT
+pin.pull = digitalio.Pull.UP
 switch = Debouncer(pin, interval=0.05)
 
 programs = os.listdir('apps')              # folder for programs
@@ -44,7 +44,7 @@ def menu_create():
     mainmenu.append(listitem)
 
 def menu_fill(s):
-  for item in range(9):
+  for item in range(8,-1,-1):
     mainmenu[item].text = menu[item + s]
 
 def menu_select(x):
@@ -54,7 +54,7 @@ def menu_select(x):
   else:
     x -= 1
   mainmenu[x].color = color_menu
-  
+
 # setup
 menu_create()
 menu_fill(0)
