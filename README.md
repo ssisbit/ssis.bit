@@ -10,7 +10,7 @@ AIO microcomputer solution with CircuitPython, display and battery for SSIS stud
 
 ### T-Display
 
-CircuitPython supports [more than 200 different boards](https://circuitpython.org/downloads). Locally available are the [TTGO T-Display](https://circuitpython.org/board/unknown/?unknown_id=lilygo_ttgo_tdisplay_esp32_16m) and the [TTGO T8 ESP32-S2 ST7789](https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/) at several online stores. The board includes the powerful 240MHz CPU, 4MB Flash and 8MB PSRAM, a 1.14" ST7789 display, a microSD card slot for virtually unlimited local data storage, battery connector 1.25mm JST with charge controller and regular USB-C connector. And buildin WiFi, of course. In case of the T8 it even has a microSD card slot.
+CircuitPython supports more than ~~200~~ 380 [different boards](https://circuitpython.org/downloads). Locally available are the [TTGO T-Display](https://circuitpython.org/board/unknown/?unknown_id=lilygo_ttgo_tdisplay_esp32_16m) and the [TTGO T8 ESP32-S2 ST7789](https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/) at several online stores. The board includes the powerful 240MHz CPU, 4MB Flash and 8MB PSRAM, a 1.14" ST7789 display, a microSD card slot for virtually unlimited local data storage, battery connector 1.25mm JST with charge controller and regular USB-C connector. And buildin WiFi, of course. In case of the T8 it even has a microSD card slot.
 
 ### T8
 
@@ -142,6 +142,12 @@ Therefore we can just solder a 4-pin JST XH 2.54 mm pitch (0.1 ") connector to a
 ![I2C on ssis:bit](docs/i2c_connector2.jpg)
 
 ## Installation
+
+### Early 2023
+
+You can do everything from your browser. You don't even need to switch the jumpers anymore. Just navigate to https://circuitpython.org/board/lilygo_ttgo_t8_s2_st7789/ and click on the open installer. Follow instructions.
+
+### Historic instructions from December 2021 (deprecated)
 
 Connect your T8 ST7789 to a USB port of your computer and determine the port. You can do this by right-click on the Windows symbol > Device Manager > ports (COM & LPT) and there you'll find ```USB-SERIAL CH340 (COM5)```. Here COM5 would be your serial port. Open ```cmd``` or ```powershell``` and navigate to the folder with the esptool.exe and firmware.bin.
 
