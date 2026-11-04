@@ -1,5 +1,8 @@
 # ssis:bit
 
+![GitHub License](https://img.shields.io/github/license/ssisbit/ssis.bit)
+![GitHub Release](https://img.shields.io/github/v/release/ssisbit/ssis.bit)
+
 AIO microcomputer solution with CircuitPython, display and battery for SSIS students.
 
 ![T8 running CircuitPython](docs/ssis.bit_2022-01-06.jpg)
